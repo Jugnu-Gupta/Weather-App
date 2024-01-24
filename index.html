@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Weather website | Jugnu Gupta</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="card">
+            <h1 class="heading">WEATHER APP</h1>
+            <div class="btn">
+                <button class="userWeather current-tab" data-userTab>Your Weather</button>
+                <button class="searchWeather" data-searchTab>Search Weather</button>
+            </div>
+
+            <!-- Grant location access -->
+            <div class="grantLocationAccess deactivate">
+                <img src="./images/location.png" alt="" loading="lazy">
+                <h1>Grant Location Access</h1>
+                <p>Allow access to get weathher information</p>
+                <button onclick="getLocation()">GRANT ACCESS</button>
+            </div>
+
+            <!-- search box -->
+            <form class="search-form">
+                <input class="searchBox" type="text" placeholder="Search for city..." required>
+                <button class="search-btn">
+                    <img class="search-icon" src="./images/search.png" alt="">
+                </button>
+            </form>
+
+            <!-- loading screen -->
+            <div class="loading deactivate">
+                <img src="./images/loading.gif" alt="" loading="lazy">
+            </div>
+
+            <!-- Page not found -->
+            <div class="not-found deactivate">
+                <img src="./images/not-found.png" alt="" loading="lazy">
+            </div>
+
+            <!-- show weather info -->
+            <div class="user-Info-Container deactivate">
+
+                <!-- city name and flag -->
+                <div class="userLocation">
+                    <h1 data-cityName></h1>
+                    <img class="countryFlag" data-countryIcon>
+                </div>
+
+                <!-- weather description -->
+                <div class="weatherDesc" data-weatherDesc></div>
+                <!-- weather image -->
+                <img class="" data-weatherIcon>
+                <!-- user temperature -->
+                <div class="userTemp" user-temp></div>
+
+                <div class="weather-conditions">
+                    <div class="windspeed">
+                        <img src="./images/wind.png" alt="" loading="lazy">
+                        <h1>WINDSPEED</h1>
+                        <p data-windspeed></p>
+                    </div>
+                    <div class="humidity">
+                        <img src="./images/humidity.png" alt="" loading="lazy">
+                        <h1>HUMIDITY</h1>
+                        <p data-humidity></p>
+                    </div>
+                    <div class="clouds">
+                        <img src="./images/cloud.png" alt="" loading="lazy">
+                        <h1>CLOUDS</h1>
+                        <p data-clouds></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/848e0df24d.js" crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
